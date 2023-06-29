@@ -13,8 +13,8 @@ app.use(express.static("./public"));
 app.get("/song", (req, res) => {
   // Initialize SpotifyWebApi instance
   const spotifyApi = new SpotifyWebApi({
-    clientId: "5afabe38cf92469298c88e0da6eb7e58",
-    clientSecret: "e8314875b2d34431ae4cdaa49dd8230c",
+    clientId: "",
+    clientSecret: "",
   });
 
   async function authenticateWithSpotify() {
@@ -69,7 +69,7 @@ app.get("/playlist", async (req, res) => {
   console.log(name);
   async function getYouTubeUrl(songName) {
     try {
-      const apiKey = "AIzaSyDz_aq1y_JPxkl9vlLRmYWCSo5wC10Z4cE";
+      const apiKey = "";
       const apiUrl = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&q=${encodeURIComponent(
         songName + "audio"
       )}&type=video&part=snippet&maxResults=1`;
